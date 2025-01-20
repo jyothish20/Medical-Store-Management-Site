@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+              background-image: url("https://img.freepik.com/free-vector/pharmacy-interior-with-computer-monitors-glass-counter-various-medicines-boxes-jars-tubes-shelves-racks-cartoon-vector-empty-drugstore-inside-with-medical-product-pills_107791-23547.jpg");
+              background-repeat: no-repeat;
+              background-size: cover;
+        }
+        h1{
+            text-align: center;
+            color: orange;
+            font-family: serif;
+        }
+        .column{
+            background-color: white;
+            border-radius: 2px solid white;
+            margin-left: 250px;
+            margin-top: 150px;
+            padding: 10px;
+            width: 50%;
+            
+        }
+        .hib{
+            margin-left: 200px;
+            margin-top: 15px;
+            font-family: serif;
+        }
+        #name,#hlo,#hi{
+            width: 60%;
+            height: 30px;
+            font-weight: 600;
+            background-color: bisque;
+            border: 2px solid bisque;
+            }
+            .fork{
+                width: 60%;
+                background-color: blue;
+                border: 2px solid blue;
+                color: white;
+                height: 40px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            #temp,#rajav,#store{
+                color: royalblue;
+            }
+            
+    </style>
+</head>
+<body>
+    <div class="column">
+        <h1>Enter your login details</h1>
+        <form action="/login" method="post">
+           <div class="hib">
+            <label id="store"><b>Email:</b></label><br>
+            <input type="email" id="hi" name="email" placeholder="Enter your email">
+            <p class="space"></p>
+            <label id="rajav"><b>Password:</b></label><br>
+            <input type="password" id="hlo" name="password" placeholder="Enter your password">
+            <p class="space"></p>
+            <button class="fork">login</button>
+            
+            
+              </div>
+              
+            
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

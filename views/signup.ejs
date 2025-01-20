@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url("https://media.istockphoto.com/id/1135284188/photo/if-you-need-its-here.jpg?s=612x612&w=0&k=20&c=2yfZHUqTEGW4-5r4Sc4pzWKx0DtubpdbTkX3h_w1AJg=");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: orange;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .column {
+            background-color: white;
+            border-radius: 5px;
+            margin-left: 250px;
+            margin-top: 150px;
+            padding: 20px;
+            width: 50%;
+        }
+        .hib {
+            margin-left: 200px;
+            margin-top: 15px;
+            font-family: serif;
+        }
+        #name, #hlo, #hi {
+            width: 60%;
+            height: 30px;
+            font-weight: 600;
+            background-color: bisque;
+            border: 2px solid bisque;
+        }
+        .fork {
+            width: 60%;
+            background-color: green;
+            border: 2px solid green;
+            color: white;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #temp, #rajav, #store {
+            color: blueviolet;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .login-link a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="column">
+        <h1>Signup for Free</h1>
+        <form action="/createUser" method="post">
+           <div class="hib">
+            <label id="temp"><b>Username:</b></label><br>
+            <input type="text" id="name" name="username" placeholder="Enter your name">
+            <p class="space"></p>
+            <label id="store"><b>Email:</b></label><br>
+            <input type="email" id="hi" name="email" placeholder="Enter your email">
+            <p class="space"></p>
+            <label id="rajav"><b>Password:</b></label><br>
+            <input type="password" id="hlo" name="password" placeholder="Enter your password">
+            <p class="space"></p>
+            <button class="fork">Sign up</button>
+           </div>
+        </form>
+
+        <!-- Link to Login Page -->
+        <div class="login-link">
+            <p>Already have an account? <a href="/login">Log in here</a></p>
+        </div>
+    </div>
+
+    <!-- For showing the validations -->
+    <% if (errors && errors.length > 0) { %>
+        <ul>
+            <% errors.forEach(function(error) { %>
+                <li><%= error.msg %></li>
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>
